@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans')
+
+$color-white: #fff
+
+/*header, navigation, logo*/
+
+header
+	background: #313332
+	height: 50px
+	
+	> nav
+	
+		ul
+			margin: 0
+			padding: 0
+			list-style-type: none
+			float: right
+			display: inline-block
+
+			> li
+				display: inline-block
+
+				a
+					line-height: 50px
+					padding: 0 20px
+					display: block
+					color: $color-white
+					text-decoration: none
+					text-transform: uppercase
+					font-family: open sans
+					
+					&:hover
+						background: #7f8c8d
+			
+		img
+			padding: 10px 0
+			
+.hero
+	background: url("https://images.unsplash.com/1/work-stations-plus-espresso.jpg?dpr=1&auto=format&fit=crop&w=767&h=511&q=80&cs=tinysrgb&crop=&bg=")
+	background-size: cover
+	background-position: center
+	width: 100%
+	height: 60vh
+	overflow: hidden
+	position: relative
+	
+.slogan
+	background: rgba(0, 0, 0, 0.5)
+	float: right
+	width: 450px
+	max-width: 800px
+	position: absolute
+	right: 0
+	top: 50%
+	
+	h1
+		padding: 20px 40px 20px 10px
+		color: $color-white
+		font-size: 30px
+		font-weight: normal
+		text-transform: uppercase
+		
+/*sekcja korzysci*/	
+
+section 
+	> .korzysci
+		margin: 50px auto
+		text-align: center
+
+
+	> div
+		.col-m-4 
+			> .fa-globe
+				height: 100px
+				width: 100px
+				border: 0
+				background: #313332
+				border-radius: 15%
+				font-size: 60px
+				line-height: 100px
+				margin: 0px
+				color: $color-white
+				
+			> .fa-laptop
+				@extend .fa-globe
+				
+			> .fa-cogs
+				@extend .fa-globe
+				
+			> h3
+				padding-top: 15px
+				padding-bottom: 5px
+				text-transform: uppercase
+				font-family: open sans
+				font-size: 20px
+				
+			> p
+				padding: 0 50px
+				text-align: justify
+				font-family: open sans
+				color: #7f8c8d
+				
+/*info*/
+
+section
+	> .info
+		h1
+			padding-top: 50px
+			text-align: center
+			font-size: 40px
+			text-transform: uppercase
+			font-family: open sans
+
+		p 
+			text-align: center
+			font-family: open sans
+			padding: 20px 150px
+			color: #7f8c8d
+
+/*gallery*/
+
+.gallery [class*="col-"]
+	position: relative
+	padding: 0
+	height: 150px
+	
+	img 
+		float: left
+		width: 100%
+		height: 100%
+		display: inline-block
+		object-fit: cover
+
+	.col-m-2
+		position: relative
+	
+	.col-m-4
+		@extend .col-m-2
+
+.layer 
+	position: absolute
+	width: 100%
+	height: 100%
+	text-align: center
+	opacity: 0
+	transition: .3s
+	padding-top: 70px
+
+	&:hover 
+		background-color: rgba(0, 0, 0, 0.5)
+		background-size: cover
+		cursor: pointer
+		opacity: 1
+		display: inline-block
+
+	i.fa 
+		background-color: $color-white
+		height: 25px
+		width: 25px
+		border-radius: 5px
+		line-height: 25px
+		font-size: 20px
+		text-align: center
+
+/* team */
+
+.team [class*="col-"]
+	position: relative
+
+.team 
+	box-sizing: border-box
+	text-align: center
+	margin: 0 auto
+	margin-top: 100px
+	margin-bottom: 100px
+
+	h4 
+		font-weight: bold
+		margin-top: 15px
+		font-size: 18px
+		text-align: center
+
+	.member
+		height: 150px
+		margin: 0 auto
+		text-align: center
+		display: inline-block
+		position: relative
+		
+		img 
+			float: left
+			width: 150px
+			height: 150px
+			border-radius: 100%
+			object-fit: cover
+
+		.layer 
+			position: absolute
+			width: 100%
+			height: 100%
+			background: rgba(0,0,0,0.5)
+			top: 0px
+			left: 0px
+			border-radius: 100%
+
+			p 
+				color: $color-white
+				font-weight: bold
+
+/* banner */
+
+.banner
+	box-sizing: border-box
+	background-color: #95a5a6
+	margin-top: 100px
+
+	.col-m-4
+		img 
+			float: left
+			width: 300px
+			height: 220px
+			padding-right: 30px
+			padding-bottom: 0
+			margin-bottom: 0
+			object-fit: cover
+
+	.col-m-8 
+		h2 
+			text-align: left
+			margin-right: 0
+			text-transform: uppercase
+			font-weight: 700
+
+		p 
+			text-align: left
+			margin-right: 0
+			column-count: 2
+			column-gap: 20px
+
+/*numbers*/
+
+.numbers
+	h1 
+		font-size: 60px
+		font-family: open sans
+
+	p 
+		text-transform: uppercase
+		color: #06c7e6
+
+/*FOOTER*/
+
+.footer 
+	background-color: #313234
+	margin: 0 auto
+	font-family: 'Raleway', sans-serif
+	margin-bottom: 0
+
+	h2
+		text-transform: uppercase
+		text-align: left
+		color: $color-white
+	
+		&:after 
+			width: 100px
+			height: 2px
+			background-color: white
+			content: ""
+			display: inline-block
+			margin: 8px
+			vertical-align: center
+
+	.col-m-4 
+		display: inline-block
+		padding: 30px 50px
+
+		p
+			color: $color-white
+			text-align: left
+
+
+	.col-m-3 
+		color: $color-white
+	.col-m-9
+		@extend .col-m-3
+		
+	i.fa 
+		background-color: #06c7e6
+		color: $color-white
+		font-size: 12px
+		text-align: center
+		width: 20px
+		height: 20px
+		padding: 3px
+		
+		&:hover
+			cursor: pointer
+
+.copyrights 
+	background-color: #222
+	background-size: cover
+	background-position: center
+	color: #777
+	text-align: center
+	position: relative
+	width: 100%
+	
+/* grid, media queries*/
+
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+.container 
+	width: 100%
+	max-width: 1200px
+	margin: 0 auto
+   
+.row:before
+	clear: both
+	content: ""
+	display: table
+.row:after
+	@extend .row:before
+
+[class*="col-"]
+	width: 100%
+	padding: 12px 
+	float: left
+
+
+@media (max-width: 767px)
+	/* For tablets: */
+    
+	/*navigation*/
+	header 
+		height: 100%
+    
+		> nav 
+			ul 
+				float: none
+				display: block
+			li 
+				display: block
+				text-align: center
+    
+	/*gallery*/
+    
+	.gallery 
+		img
+			float: none
+			margin: 5px auto
+			max-width: 100%
+			padding: 0 auto
+		.layer
+			opacity: 1 
+    
+	.col-s-1 
+		width: 8.33%
+	.col-s-2 
+		width: 16.66%
+	.col-s-3 
+		width: 25%
+	.col-s-4 
+		width: 33.33%
+	.col-s-5 
+		width: 41.66%
+	.col-s-6 
+		width: 50%
+	.col-s-7 
+		width: 58.33%
+	.col-s-8 
+		width: 66.66%
+	.col-s-9 
+		width: 75%
+	.col-s-10 
+		width: 83.33%
+	.col-s-11 
+		width: 91.66%
+	.col-s-12 
+		width: 100%
+
+
+@media (min-width: 768px)
+	/* For desktop: */
+	.col-m-1 
+		width: 8.33%
+	.col-m-2 
+		width: 16.66%
+	.col-m-3 
+		width: 25%
+	.col-m-4 
+		width: 33.33%
+	.col-m-5 
+		width: 41.66%
+	.col-m-6 
+		width: 50%
+	.col-m-7 
+		width: 58.33%
+	.col-m-8 
+		width: 66.66%
+	.col-m-9 
+		width: 75%
+	.col-m-10 
+		width: 83.33%
+	.col-m-11 
+		width: 91.66%
+	.col-m-12 
+		width: 100%
